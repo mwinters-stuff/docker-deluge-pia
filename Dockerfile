@@ -11,6 +11,7 @@ RUN apt-get update && \
     openssl \
     wireguard-tools \
     iproute2 \
+    net-tools \
     ncurses-bin && \
     rm -rf \
       /tmp/* \
