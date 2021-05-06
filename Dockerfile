@@ -24,6 +24,7 @@ RUN apt-get update && \
 WORKDIR /
 #COPY manual-connections/* /manual-connections/ 
 RUN git clone --depth=1 https://github.com/pia-foss/manual-connections.git
+RUN ./patch.sh
 WORKDIR /manual-connections
 COPY root/ /
 
