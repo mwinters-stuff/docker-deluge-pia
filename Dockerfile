@@ -12,6 +12,9 @@ RUN apt-get update && \
     wireguard-tools \
     iproute2 \
     net-tools \
+    inetutils-traceroute \
+    iputils-ping \
+    dnsutils \
     ncurses-bin && \
     rm -rf \
       /tmp/* \
