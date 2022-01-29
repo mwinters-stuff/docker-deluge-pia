@@ -6,6 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     -
+      name: build docker-deluge
+      uses: convictional/trigger-workflow-and-wait@v1.3.0
+      with:
+        owner: mwinters-stuff
+        repo: docker-deluge
+        workflow_file_name: main.yaml
+        waiting_interval: 30
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    
+    -
       name: Checkout
       uses: actions/checkout@v2
     -
