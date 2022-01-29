@@ -16,7 +16,7 @@ jobs:
         repo: docker-deluge
         workflow_file_name: main.yaml
         wait_interval: 30
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PAT }}
     
     -
       name: Checkout
