@@ -15,7 +15,7 @@ jobs:
         owner: mwinters-stuff
         repo: docker-deluge
         workflow_file_name: main.yaml
-        waiting_interval: 30
+        wait_interval: 30
         github_token: ${{ secrets.GITHUB_TOKEN }}
     
     -
