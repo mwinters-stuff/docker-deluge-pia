@@ -11,6 +11,7 @@ RUN apk update && \
     openssl \
     wireguard-tools \
     iproute2 \
+    ncurses \
     net-tools && \
     rm -rf \
       /tmp/* \
