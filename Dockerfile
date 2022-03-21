@@ -1,7 +1,7 @@
 FROM ghcr.io/mwinters-stuff/docker-deluge:latest
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
+RUN apk update && \
+    apk add \
     bash \
     ca-certificates \
     curl \
@@ -11,14 +11,9 @@ RUN apt-get update && \
     openssl \
     wireguard-tools \
     iproute2 \
-    net-tools \
-    inetutils-traceroute \
-    iputils-ping \
-    dnsutils \
-    ncurses-bin && \
+    net-tools && \
     rm -rf \
       /tmp/* \
-      /var/lib/apt/lists/* \
       /var/tmp/*
 
 WORKDIR /
